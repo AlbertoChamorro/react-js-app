@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 
 import Media from './src/play-list/components/media';
 //console.log('hello world');
@@ -10,4 +10,4 @@ import Media from './src/play-list/components/media';
 //ReactDOM.render(gretting, app);
 
 
-ReactDOM.render(<Media/>, app);
+render(<Media/>, app);
