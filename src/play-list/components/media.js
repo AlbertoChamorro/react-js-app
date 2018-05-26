@@ -14,10 +14,10 @@ class Media extends Component {
         return (
             //  style={styles.container}
             <div className="Media">
-                <div>
-                    <img src="./images/bitcoin.jpeg" alt="" width={260} height={160}/>
-                    <h3>Something React.js</h3>
-                    <p>by Alberto Chamorro</p>
+                <div className="Media-content">
+                    <img className="Media-cover" src={this.props.imagePath} alt="" width={260} height={160}/>
+                    <h3 className="Media-title">{this.props.title}</h3>
+                    <p className="Media-author">by {this.props.author}</p>
                 </div>
             </div>
         )

@@ -10,4 +10,6 @@ import Media from './src/play-list/components/media';
 //ReactDOM.render(gretting, app);
 
 
-render(<Media/>, app);
+render(<Media title="Que es React.js?" 
+            author = "Alberto Chamorro"
+            imagePath = "./images/bitcoin.jpeg"/>, app);
