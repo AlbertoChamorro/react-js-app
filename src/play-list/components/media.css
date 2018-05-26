@@ -1,0 +1,8 @@
+.Media{
+    color: #44546b;
+    width: 260px;
+    border: 0.5px solid red;
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+}
