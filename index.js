@@ -12,4 +12,5 @@ import Media from './src/play-list/components/media';
 
 render(<Media title="Que es React.js?" 
             author = "Alberto Chamorro"
-            imagePath = "./images/bitcoin.jpeg"/>, app);
+            imagePath = "./images/bitcoin.jpeg"
+            type = "video"/>, app);
