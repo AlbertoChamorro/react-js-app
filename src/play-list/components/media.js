@@ -25,7 +25,7 @@ class Media extends Component {
     handleOnClickMedia = (event) => {
         console.log(this.props.title);
         this.setState({
-            title: "New " + this.state.title
+            title: `New ${this.state.title}`
         });
     }
 
