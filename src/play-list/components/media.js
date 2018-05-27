@@ -4,13 +4,29 @@ import './media.css'
 
 class Media extends Component {
 
-    constructor(props){
-        super(props)
-      //  this.handleOnClickMedia = this.handleOnClickMedia.bind(this)
+    state = {
+        author: this.props.author,
+        imagePath: this.props.imagePath,
+        type: this.props.type,
+        title: this.props.title
     }
+    // constructor(props){
+    //     super(props)
+    //   //  this.handleOnClickMedia = this.handleOnClickMedia.bind(this)
+
+    //     this.state = {
+    //         author: this.props.author,
+    //         imagePath: this.props.imagePath,
+    //         type: this.props.type,
+    //         title: this.props.title
+    //     }
+    // }
 
     handleOnClickMedia = (event) => {
         console.log(this.props.title);
+        this.setState({
+            title: "New " + this.state.title
+        });
     }
 
     render(){
@@ -26,9 +42,9 @@ class Media extends Component {
             //  style={styles.container}
             <div className="Media" onClick = {this.handleOnClickMedia}>
                 <div className="Media-content">
-                    <img className="Media-cover" src={this.props.imagePath} alt="" width={260} height={160}/>
-                    <h3 className="Media-title">{this.props.title}</h3>
-                    <p className="Media-author">by {this.props.author}</p>
+                    <img className="Media-cover" src={this.state.imagePath} alt="" width={260} height={160}/>
+                    <h3 className="Media-title">{this.state.title}</h3>
+                    <p className="Media-author">by {this.state.author}</p>
                 </div>
             </div>
         )
@@ -37,7 +53,7 @@ class Media extends Component {
 
 Media.propTypes = {
     author: PropTypes.string.isRequired,
-    image: PropTypes.string,
+    imagePath: PropTypes.string,
     type: PropTypes.oneOf(['audio', 'video']),
     title: PropTypes.string
 };
