@@ -6,7 +6,7 @@ class Media extends Component {
 
     state = {
         author: this.props.author,
-        imagePath: this.props.imagePath,
+        cover: this.props.cover,
         type: this.props.type,
         title: this.props.title
     }
@@ -16,7 +16,7 @@ class Media extends Component {
 
     //     this.state = {
     //         author: this.props.author,
-    //         imagePath: this.props.imagePath,
+    //         cover: this.props.cover,
     //         type: this.props.type,
     //         title: this.props.title
     //     }
@@ -42,7 +42,7 @@ class Media extends Component {
             //  style={styles.container}
             <div className="Media" onClick = {this.handleOnClickMedia}>
                 <div className="Media-content">
-                    <img className="Media-cover" src={this.state.imagePath} alt="" width={260} height={160}/>
+                    <img className="Media-cover" src={this.state.cover} alt="" width={260} height={160}/>
                     <h3 className="Media-title">{this.state.title}</h3>
                     <p className="Media-author">by {this.state.author}</p>
                 </div>
@@ -53,9 +53,9 @@ class Media extends Component {
 
 Media.propTypes = {
     author: PropTypes.string.isRequired,
-    imagePath: PropTypes.string,
+    cover: PropTypes.string,
     type: PropTypes.oneOf(['audio', 'video']),
-    title: PropTypes.string
+    title: PropTypes.string.isRequired
 };
 
 export default Media;
