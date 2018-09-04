@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types'; 
 import './media.css'
 
-class Media extends Component {
+class Media extends PureComponent {
 
     state = {
         author: this.props.author,
@@ -10,17 +10,6 @@ class Media extends Component {
         type: this.props.type,
         title: this.props.title
     }
-    // constructor(props){
-    //     super(props)
-    //   //  this.handleOnClickMedia = this.handleOnClickMedia.bind(this)
-
-    //     this.state = {
-    //         author: this.props.author,
-    //         cover: this.props.cover,
-    //         type: this.props.type,
-    //         title: this.props.title
-    //     }
-    // }
 
     handleOnClickMedia = (event) => {
         console.log(this.props.title);
